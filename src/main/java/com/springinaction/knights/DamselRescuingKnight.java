@@ -1,8 +1,14 @@
-package com.springinaction.knights;/**
-* Created by Alexander on 16/01/2022
-* COMMENTS ABOUT PROGRAM HERE */public class DamselRescuingKnight{
+package com.springinaction.knights;
 
-    public static void main (String [] args){
-     
-     }//main
-}//class
+public class DamselRescuingKnight implements Knight {
+
+   private RescueDamselQuest quest;
+
+   public DamselRescuingKnight() {
+      this.quest = new RescueDamselQuest();  //tight coupling - the knight can only embark on one type of quest
+   }
+
+   public void embarkOnQuest() {
+      quest.embark();
+   }
+}

@@ -1,8 +1,9 @@
-package com.springinaction.knights;/**
-* Created by Alexander on 16/01/2022
-* COMMENTS ABOUT PROGRAM HERE */public class RescueDamselQuest{
+package com.springinaction.knights;
 
-    public static void main (String [] args){
-     
-     }//main
-}//class
+
+public class RescueDamselQuest implements Quest
+{
+   public void embark() {
+      System.out.println("The damsel has been rescued!");
+   }
+}
